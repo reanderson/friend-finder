@@ -5,10 +5,10 @@ module.exports = function(app) {
 // GET route to send back friendData as JSON
 app.get("/api/friends", function(req, res) {
   res.json(friendData)
-})
+});
 
 // POST route to receive  data from front end and add it to friendData
-app.post("/api/friends"), function (req, res) {
+app.post("/api/friends", function (req, res) {
   // retrieve sent information
   const newFriend = req.body;
 
@@ -16,5 +16,5 @@ app.post("/api/friends"), function (req, res) {
   friendData.push(newFriend)
 
   res.json(newFriend)
-}
+})
 }

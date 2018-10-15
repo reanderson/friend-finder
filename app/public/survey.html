@@ -1,17 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
-<title>Friend Finder: Find a Friend</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+  <title>Friend Finder: Find a Friend</title>
 </head>
+
 <body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1 class="display-3">Friend Finder</h1>
+    </div>
+
+    <div class="card">
+      <h5 class="card-header">
+        Answer the questions to be matched with your new friend!
+      </h5>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="nameInput">Your Name (required)</label>
+            <input type="text" class="form-control" id="nameInput">
+          </div>
+          <div class="form-group">
+            <label for="imageInput">Picture (required)</label>
+            <input type="text" class="form-control" id="imageInput">
+          </div>
+
+          <hr>
+
+          <div class="form-group">
+            <label for="q01">I have a vivid imagination.</label>
+
+            <input type="range" class="form-control-range" id="q01" min="1" max="5" step="1" value="3">
+            <div class="row justify-content-between">
+              <div class="col">
+                <span class="text-left small">Strongly Disagree</span>
+              </div>
+              <div class="col text-right">
+                <span class="small">Strongly Agree</span>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="form-group">
+            <label for="q02">I enjoy being part of a large group.</label>
+
+            <input type="range" class="form-control-range" id="q02" min="1" max="5" step="1" value="3">
+            <div class="row justify-content-between">
+              <div class="col">
+                <span class="text-left small">Strongly Disagree</span>
+              </div>
+              <div class="col text-right">
+                <span class="small">Strongly Agree</span>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="form-group">
+            <label for="q03">I excel at what I do.</label>
+
+            <input type="range" class="form-control-range" id="q03" min="1" max="5" step="1" value="3">
+            <div class="row justify-content-between">
+              <div class="col">
+                <span class="text-left small">Strongly Disagree</span>
+              </div>
+              <div class="col text-right">
+                <span class="small">Strongly Agree</span>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="form-group">
+            <label for="q04">I get stressed out easily.</label>
+
+            <input type="range" class="form-control-range" id="q04" min="1" max="5" step="1" value="3">
+            <div class="row justify-content-between">
+              <div class="col">
+                <span class="text-left small">Strongly Disagree</span>
+              </div>
+              <div class="col text-right">
+                <span class="small">Strongly Agree</span>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="form-group">
+            <label for="q05">I value cooperation over competition.</label>
+
+            <input type="range" class="form-control-range" id="q05" min="1" max="5" step="1" value="3">
+            <div class="row justify-content-between">
+              <div class="col">
+                <span class="text-left small">Strongly Disagree</span>
+              </div>
+              <div class="col text-right">
+                <span class="small">Strongly Agree</span>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="form-group">
+            <label for="q06">I enjoy trying new things.</label>
+
+            <input type="range" class="form-control-range" id="q06" min="1" max="5" step="1" value="3">
+            <div class="row justify-content-between">
+              <div class="col">
+                <span class="text-left small">Strongly Disagree</span>
+              </div>
+              <div class="col text-right">
+                <span class="small">Strongly Agree</span>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="form-group">
+            <label for="q07">I prefer to hear all sides of a discussion before making conclusions.</label>
+
+            <input type="range" class="form-control-range" id="q07" min="1" max="5" step="1" value="3">
+            <div class="row justify-content-between">
+              <div class="col">
+                <span class="text-left small">Strongly Disagree</span>
+              </div>
+              <div class="col text-right">
+                <span class="small">Strongly Agree</span>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="form-group">
+            <label for="q08">I would rather lose sleep ensuring that a project is as good as it can be than submit
+              flawed work.</label>
+
+            <input type="range" class="form-control-range" id="q08" min="1" max="5" step="1" value="3">
+            <div class="row justify-content-between">
+              <div class="col">
+                <span class="text-left small">Strongly Disagree</span>
+              </div>
+              <div class="col text-right">
+                <span class="small">Strongly Agree</span>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="form-group">
+            <label for="q09">I have an easy time meeting new people.</label>
+
+            <input type="range" class="form-control-range" id="q09" min="1" max="5" step="1" value="3">
+            <div class="row justify-content-between">
+              <div class="col">
+                <span class="text-left small">Strongly Disagree</span>
+              </div>
+              <div class="col text-right">
+                <span class="small">Strongly Agree</span>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="form-group">
+            <label for="q10">I would do almost anything to help a friend in need.</label>
+
+            <input type="range" class="form-control-range" id="q10" min="1" max="5" step="1" value="3">
+            <div class="row justify-content-between">
+              <div class="col">
+                <span class="text-left small">Strongly Disagree</span>
+              </div>
+              <div class="col text-right">
+                <span class="small">Strongly Agree</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <div class="small text-danger mb-2" id="validate"></div>
+            <button class="btn btn-primary btn-lg" id="submitBtn">
+              <i class="fas fa-search"></i> Find a Friend!
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" role="dialog" id="friendModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Your New Friend!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="friend-info">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
+  <script>
+    $("#submitBtn").on("click", function (event) {
+      event.preventDefault()
+
+      if ($("#nameInput").val().trim() === "" || $("#imageInput").val().trim() === "") {
+        $("#validate").text("Please enter a name and image!")
+        return false;
+      }
+
+      $("#validate").empty()
+
+      const friendInput = {
+        name: $("#nameInput").val().trim(),
+        photo: $("#imageInput").val().trim(),
+        scores: [
+          parseInt($("#q01").val()),
+          parseInt($("#q02").val()),
+          parseInt($("#q03").val()),
+          parseInt($("#q04").val()),
+          parseInt($("#q05").val()),
+          parseInt($("#q06").val()),
+          parseInt($("#q07").val()),
+          parseInt($("#q08").val()),
+          parseInt($("#q09").val()),
+          parseInt($("#q10").val()),
+        ]
+      }
+
+      console.log(friendInput)
+
+      $.ajax({
+        url: "/api/friends",
+        method: "GET"
+      }).then(function (response) {
+        console.log(response)
+
+        // find the best match
+        const bestId = getBestMatch(friendInput, response)
+        const bestMatch = response[bestId]
+        console.log(bestMatch)
+
+        // prepare the best match modal
+        writeBestMatch(bestMatch)
+
+        // show the modal
+        $('#friendModal').modal('show')
+
+        // finally, add the inputted user into the potential friends for the future
+        // This has to be done here to prevent getting yourself as your match!
+        $.ajax({
+          url: "/api/friends",
+          method: "POST",
+          data: friendInput // req.body
+        }).then(function (response) {
+          console.log(response);
+          console.log("You've been added to the list of potential friends for others to find!")
+        })
+      })
+    })
+
+
+
+
+    function getBestMatch(friendInput, friendsArray) {
+      // Used to find which friend in the friends array is our best match
+
+      let bestMatchIndex = 0 // For now, we'll assume our best match is the first item
+      let bestDiff // This will store the difference between our scores and our best match's scores
+      let bestSame // This will store how many of our scores are exactly the same as our best match's scores
+
+      for (let i = 0; i < friendsArray.length; i++) {
+        // loop over all friends
+        let thisDiff = 0;
+        let thisSame = 0;
+
+        const friend = friendsArray[i]
+
+        for (let j = 0; j < friend.scores.length; j++) {
+          // compare scores
+          if (friend.scores[j] === friendInput.scores[j]) {
+            // if the scores are the same, great! Note that down.
+            thisSame++
+          } else {
+            // Otherwise, add the absoute value of the difference between the two to the differential.
+            thisDiff += Math.abs(friend.scores[j] - friendInput.scores[j])
+          }
+        }
+
+        if (i === 0) {
+          // initialize best scores to those of the first item
+          bestDiff = thisDiff;
+          bestSame = thisSame;
+        }
+
+        if (bestDiff === thisDiff) {
+          // If the differential of the current item is the same as that of the best match, then it's time to look at how many scores are the same.
+          if (thisSame > bestSame) {
+            // If the current item has more scores that are the same, then it becomes the new best match
+            bestMatchIndex = i
+            // Arbitrarily, if there's a tie in this value, it will go to the friend earlier in the array.
+          }
+        } else if (thisDiff < bestDiff) {
+          // A smaller differential means you're  more like someone! That means that they're a better match.
+          bestMatchIndex = i
+        }
+        // bestDiff being greater than thisDiff means no changes are necessary.
+      }
+
+      return bestMatchIndex;
+    }
+
+    function writeBestMatch(bestMatch) {
+      // writes the best match's information to the friend modal
+      $("#friend-info").empty()
+      $("#friend-info").html(
+        `<div class="text-center">
+        Congratulations! You are now friends with ${bestMatch.name}!
+        <br/>
+        <img src="${bestMatch.photo}" class="img-fluid img-thumbnail" alt="Picture of ${bestMatch.name}">
+        </div>`
+      )
+    }
+  </script>
 </body>
+
 </html>
